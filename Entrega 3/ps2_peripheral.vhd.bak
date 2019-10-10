@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_std.all;
+use work.all;
+
+entity peripheral_LED is
+    generic (
+        LEN  : natural := 4
+    );
+    port (
+        -- Gloabals
+        clk                : in  std_logic                     := '0';             
+        reset              : in  std_logic                     := '0';             
+
+        -- I/Os
+        PS2_CLK            : out std_logic_vector(LEN - 1 downto 0) := (others => '0');
+		  PS2_DAT 				: out std_logic_vector(LEN - 1 downto 0) := (others => '0');
+
+        -- Avalion Memmory Mapped Slave
+        avs_address     : in  std_logic_vector(3 downto 0)  := (others => '0'); 
+        avs_read        : in  std_logic                     := '0';             
+        avs_readdata    : out std_logic_vector(31 downto 0) := (others => '0'); 
+        avs_write       : in  std_logic                     := '0';             
+        avs_writedata   : in  std_logic_vector(31 downto 0) := (others => '0')
+    );
+end entity peripheral_LED;
+
+component ps2 is
+	port(
+	 iSTART    : in    std_logic;                    -- press the button for tranxrdb -merge .Xdefaultssmitting instrucions to device;
+	 iRST_n    : in    std_logic;                    -- FSM reset signal;
+	 iCLK_50   : in    std_logic;                    -- clock source;
+	 PS2_CLK   : inout std_logic;                    -- ps2_clock signal inout;
+	 PS2_DAT   : inout std_logic;                    -- ps2_data  signal inout;
+	 oLEFBUT   : out   std_logic;                    -- left button press display;
+	 oRIGBUT   : out   std_logic;                    -- right button press display;
+	 oMIDBUT   : out   std_logic;                    -- middle button press display;
+	 oX        : out   std_logic_vector(7 downto 0); -- X axis.
+	 oY        : out   std_logic_vector(7 downto 0) -- Y axis.
+	 );
+end component ps2;

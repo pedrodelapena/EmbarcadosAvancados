@@ -1,0 +1,29 @@
+# system info niosHello on 2019.09.25.19:33:33
+system_info:
+name,value
+DEVICE,5CSXFC6D6F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1569450810
+#
+#
+# Files generated for niosHello on 2019.09.25.19:33:33
+files:
+filepath,kind,attributes,module,is_top
+simulation/niosHello.vhd,VHDL,,niosHello,true
+simulation/submodules/niosHello_jtag_uart_0.vhd,VHDL,,niosHello_jtag_uart_0,false
+simulation/submodules/niosHello_nios2_gen2_0.v,VERILOG,,niosHello_nios2_gen2_0,false
+simulation/submodules/niosHello_onchip_memory2_0.hex,HEX,,niosHello_onchip_memory2_0,false
+simulation/submodules/niosHello_onchip_memory2_0.vhd,VHDL,,niosHello_onchip_memory2_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+niosHello.jtag_uart_0,niosHello_jtag_uart_0
+niosHello.nios2_gen2_0,niosHello_nios2_gen2_0
+niosHello.nios2_gen2_0.cpu,niosHello_nios2_gen2_0_cpu
+niosHello.onchip_memory2_0,niosHello_onchip_memory2_0
+niosHello.peripheral_LED_0,niosHello_peripheral_LED_0
+niosHello.ps2_peripheral_0,niosHello_ps2_peripheral_0
+niosHello.mm_interconnect_0,niosHello_mm_interconnect_0
+niosHello.irq_mapper,niosHello_irq_mapper
+niosHello.rst_controller,altera_reset_controller

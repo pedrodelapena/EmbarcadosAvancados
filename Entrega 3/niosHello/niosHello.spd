@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/niosHello_onchip_memory2_0.hex"
+   type="HEX"
+   library="onchip_memory2_0" />
+ <file
+   path="simulation/submodules/niosHello_onchip_memory2_0.vhd"
+   type="VHDL"
+   library="onchip_memory2_0" />
+ <file
+   path="simulation/submodules/niosHello_nios2_gen2_0.v"
+   type="VERILOG"
+   library="nios2_gen2_0" />
+ <file
+   path="simulation/submodules/niosHello_jtag_uart_0.vhd"
+   type="VHDL"
+   library="jtag_uart_0" />
+ <file path="simulation/niosHello.vhd" type="VHDL" />
+ <topLevel name="niosHello" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="niosHello.onchip_memory2_0"
+   modelPath="niosHello.onchip_memory2_0" />
+</simPackage>
